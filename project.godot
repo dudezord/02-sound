@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Spectrum Attack!"
-run/main_scene="res://spectrum/SpectrumAnalyzer.tscn"
+run/main_scene="res://spectrum_test/SpectrumAnalyzer.tscn"
 config/icon="res://icon.png"
 
 [display]
