@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/claire-de-lune.mp3-737d56c94b10ec524bca4cf750c7d5f4.mp3str"
+
+[deps]
+
+source_file="res://spectrum/claire-de-lune.mp3"
+dest_files=[ "res://.import/claire-de-lune.mp3-737d56c94b10ec524bca4cf750c7d5f4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
