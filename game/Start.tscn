@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/MusticaPro_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/Start.gd" type="Script" id=2]
+[ext_resource path="res://assets/background.png" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 480.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="Button_Avoid" type="Button" parent="."]
+anchor_left = 0.3
+anchor_top = 0.483333
+anchor_right = 0.4875
+anchor_bottom = 0.5875
+custom_fonts/font = ExtResource( 1 )
+text = "Avoid"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Button_Grab" type="Button" parent="."]
+anchor_left = 0.55
+anchor_top = 0.483333
+anchor_right = 0.7375
+anchor_bottom = 0.5875
+custom_fonts/font = ExtResource( 1 )
+text = "Grab"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="GameTitle" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -97.0
+margin_top = 81.0
+margin_right = 97.0
+margin_bottom = 113.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 91.5, 16 )
+custom_fonts/font = ExtResource( 1 )
+text = "Spectrum Attack!"
+
+[node name="AuthorName" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 20.0
+margin_top = 118.0
+margin_right = 199.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 1 )
+text = "by @dudezord"
+align = 2
+
+[connection signal="pressed" from="Button_Avoid" to="." method="_on_Button_Avoid_pressed"]
+[connection signal="pressed" from="Button_Grab" to="." method="_on_Button_Grab_pressed"]

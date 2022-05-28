@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/MusticaPro_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/End.gd" type="Script" id=2]
+[ext_resource path="res://assets/background.png" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 480.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.0
+margin_top = -43.0
+margin_right = 113.0
+margin_bottom = -11.0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_right = 122.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+text = "You scored"
+
+[node name="Points" type="Label" parent="HBoxContainer"]
+margin_left = 126.0
+margin_right = 141.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+text = "X"
+
+[node name="Label3" type="Label" parent="HBoxContainer"]
+margin_left = 145.0
+margin_right = 220.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+text = "points!"
+
+[node name="MainMenu_Avoid" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = 6.0
+margin_right = 72.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 1 )
+text = "Main menu"
+
+[connection signal="pressed" from="MainMenu_Avoid" to="." method="_on_MainMenu_Avoid_pressed"]

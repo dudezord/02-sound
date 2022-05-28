@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float alpha : hint_range(0., 1.) = 1.;
+
+void fragment() {
+	vec2 backgroundUV = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
+
+	vec4 backColR = texture(SCREEN_TEXTURE, SCREEN_UV);
+	vec4 backColG = texture(SCREEN_TEXTURE, SCREEN_UV);
+	vec4 backColB = texture(SCREEN_TEXTURE, SCREEN_UV);
+	
+	vec4 texCol = texture(TEXTURE, UV);
+	
+	COLOR = mix(texCol.a * vec4(backColR.r, backColG.g, backColB.b, 1.0), texCol, alpha);
+}
+"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/alpha = 0.0

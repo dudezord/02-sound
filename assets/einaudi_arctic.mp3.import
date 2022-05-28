@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/einaudi_arctic.mp3-6b588fc20db55229ffb4bbbb02147168.mp3str"
+
+[deps]
+
+source_file="res://assets/einaudi_arctic.mp3"
+dest_files=[ "res://.import/einaudi_arctic.mp3-6b588fc20db55229ffb4bbbb02147168.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

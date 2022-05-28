@@ -11,8 +11,16 @@ config_version=4
 [application]
 
 config/name="Spectrum Attack!"
-run/main_scene="res://spectrum_test/SpectrumAnalyzer.tscn"
+run/main_scene="res://game/Start.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameBus="*res://game/GameBus.gd"
+
+[debug]
+
+settings/fps/force_fps=60
 
 [display]
 
